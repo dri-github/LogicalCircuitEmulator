@@ -1,0 +1,95 @@
+.editor {
+    height: calc(100% - 20px); /*вычитаем высоту меню*/
+}
+
+.editor .controls {
+    width: 100%;
+    background-color: #bdbdbd;
+    text-align: center;
+}
+.controls_buttons {
+    padding: 5px;
+}
+
+.controls_buttons button {
+    margin-right: 3px;
+    padding: 2px 4px;
+}
+
+.editor .work_zone {
+    width: 100%;
+    height: calc(100% - 30px - 2px * 2);
+    background-color: #bdbdbd;
+    display: flex;
+    flex-flow: row;
+}
+
+.work_zone .editor_area {
+    flex: 1;
+    background-color: #79561a;
+}
+.editor_area .selected_tab_content {
+    padding: 5px;
+    box-sizing: border-box;
+}
+.work_zone .propertys {
+    width: 100px;
+    background-color: #683820;
+}
+
+/*область для вкладок в prefabs_list*/
+.work_zone .tab_list {
+    height: 21px;
+    border-bottom: 2px solid #ffffff;
+}
+/*выбранная вкладва в prefabs_list*/
+.work_zone .selected_tab_content {
+    height: calc(100% - 21px - 2px);
+    overflow: hidden;
+    padding: 5px;
+    box-sizing: border-box;
+    border-right: 2px solid #000000;
+    border-left: 2px solid #ffffff;
+    border-bottom: none;
+}
+
+.work_zone .tab {
+    border-top: 2px solid #ffffff;
+    border-left: 2px solid #ffffff;
+    border-right: 2px solid #000000;
+    border-bottom: 2px solid #ffffff;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    margin-bottom: -2px;
+    padding: 2px 6px;
+}
+
+.work_zone .selected_tab {
+    border-top: 2px solid #ffffff;
+    border-left: 2px solid #ffffff;
+    border-right: 2px solid #000000;
+    border-bottom: none;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+.work_zone .tab,
+.work_zone .tab_list,
+.work_zone .selected_tab_content {
+    background-color: #bdbdbd;
+}
+
+.work_zone .editor_area .content {
+    height: 100%;
+    box-sizing: border-box;
+    background-color: #ffffff;
+
+    border-top: 3px solid #7b7b7b;
+    border-left: 3px solid #7b7b7b;
+    border-right: 3px solid #dedede;
+    border-bottom: 3px solid #dedede;
+}
+
+input[type=radio] {
+    border-radius: 0 0;
+}

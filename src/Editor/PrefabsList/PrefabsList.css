@@ -1,0 +1,161 @@
+/*основная область*/
+.prefabs_list {
+    width: 360px;
+    margin-right: 5px;
+}
+/*область для запросов*/
+.prefabs_list input[type=text] {
+    outline: none;
+    width: 100%;
+    background-color: #ffffff;
+    color: #000000;
+    font-size: 10pt;
+
+    border-top: 3px solid #7b7b7b;
+    border-left: 3px solid #7b7b7b;
+    border-right: 3px solid #dedede;
+    border-bottom: 3px solid #dedede;
+
+    flex: 1;
+    margin: 5px;
+    padding: 3px;
+}
+/*область для запросов в выбранном состоянии*/
+.prefabs_list input[type=text]:focus {
+
+}
+
+/*!!!*/
+.prefabs_list .search_text {
+    display: flex;
+    flex-flow: row;
+    width: 100%;
+}
+/*область с префабами*/
+.prefabs_list .search_result {
+    background-color: #ffffff;
+    height: calc(100% - 34px);
+    display: grid;
+    /*grid-template-columns: calc(50% - 3px / 2) calc(50% - 3px / 2);
+    grid-template-rows: min-content;
+    grid-gap: 3px;*/
+    overflow-y: scroll;
+    box-sizing: border-box;
+    padding: 5px;
+
+    border-top: 3px solid #7b7b7b;
+    border-left: 3px solid #7b7b7b;
+    border-right: 3px solid #dedede;
+    border-bottom: 3px solid #dedede;
+}
+/*область для вкладок в prefabs_list*/
+.prefabs_list .tab_list {
+    height: 21px;
+    border-bottom: 2px solid #ffffff;
+}
+/*выбранная вкладва в prefabs_list*/
+.prefabs_list .selected_tab_content {
+    height: calc(100% - 21px - 2px);
+    overflow: hidden;
+    padding: 5px;
+    box-sizing: border-box;
+
+    border-right: 2px solid #000000;
+    border-left: 2px solid #ffffff;
+    border-bottom: none;
+}
+
+.prefabs_list .tab {
+    border-top: 2px solid #ffffff;
+    border-left: 2px solid #ffffff;
+    border-right: 2px solid #000000;
+    border-bottom: 2px solid #ffffff;
+
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+
+    margin-bottom: -2px;
+    padding: 2px 6px;
+}
+.prefabs_list .selected_tab {
+    border-top: 2px solid #ffffff;
+    border-left: 2px solid #ffffff;
+    border-right: 2px solid #000000;
+    border-bottom: none;
+
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+.prefabs_list .tab,
+.prefabs_list .tab_list,
+.prefabs_list .selected_tab_content {
+    background-color: #bdbdbd;
+}
+
+.prefabs_list .search_result .prefab {
+    width: 100%;
+    height: 120px;
+    box-sizing: border-box;
+
+    background-color: #ffffff;
+
+    user-select: none; /*убирает возможность выделить текст*/
+}
+.prefabs_list .search_result .name {
+    font-family: Arial;
+    font-size: 11pt;
+    padding: 3px;
+    color: #000000;
+    background-color: #7b7b7b;
+    width: 100%;
+    text-align: center;
+    box-sizing: border-box;
+}
+.prefabs_list .search_result .data {
+    height: calc(100% - 23px - 3px - 3px * 2);
+    padding: 3px;
+
+    border-left: 3px dashed #7b7b7b;
+    border-right: 3px dashed #7b7b7b;
+    border-bottom: 3px dashed #7b7b7b;
+}
+.prefabs_list .search_result .data > img {
+    float: left;
+}
+.prefabs_list .search_result .data .description {
+    font-family: Arial;
+    font-size: 9pt;
+    color: #000000;
+    width: 50%;
+    height: 96px;
+    float: right;
+    box-sizing: border-box;
+    padding: 3px;
+    padding-top: 6px;
+
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.prefabs_list ::-webkit-scrollbar {
+    width: 8px;
+}
+.prefabs_list ::-webkit-scrollbar-track {
+    background-color: #ffffff;
+}
+/* Handle */
+.prefabs_list ::-webkit-scrollbar-thumb {
+    background-color: #bebebe;
+    border-radius: 4px 4px;
+}
+/* Handle on hover */
+/*.prefabs_list ::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}*/
+
+td, tr {
+    max-height: 150px;
+    vertical-align: top;
+}

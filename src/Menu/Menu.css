@@ -1,0 +1,99 @@
+/*=============================================================*/
+/*                          Пояснение                          */
+/*=============================================================*/
+/* line_menu - класс линейного меню, применяется к тегу ul     */
+/* popup_menu - класс выпадающего меню, применяется к тегу ul  */
+/* line_menu_active, popup_menu_active - меню активно          */
+/*=============================================================*/
+/*
+    <ul className="...">
+        <li>
+            <div>Text</div>
+            <ul>...</ul>
+        </li>
+    </ul>
+*/
+/*=============================================================*/
+
+/*====================================*/
+/* общие свойства для всех типов меню */
+/*====================================*/
+.line_menu,
+.popup_menu {
+    margin: 0px;
+    padding: 0px;
+}
+
+.line_menu li > ul,
+.popup_menu li > ul {
+    position: absolute; /*для меню в пункте меню*/
+    display: none; /*изначально скрывает все меню*/
+}
+
+.line_menu_active,
+.popup_menu_active,
+.popup_menu li:hover > ul {
+    display: block !important; /*делает скрытую часть меню видимой*/
+}
+
+/*меню расположенное в линию*/
+.line_menu {
+    width: max-content;
+}
+.line_menu li {
+    list-style-type: none; /*убирает маркеры списка*/
+    float: left; /*размещает список горизонтально*/
+    position: relative; /*задаёт позицию для позиционирования*/
+}
+.line_menu li > ul {
+    top: 100%; /*меню появляется под родительским*/
+}
+
+/*выпадающее меню*/
+.popup_menu {
+    min-width: 100px;
+    max-width: 200px;
+    width: max-content;
+}
+.popup_menu li {
+    list-style-type: none; /*убирает маркеры списка*/
+    float: none; /*делает меню вертикальным*/
+    position: relative;
+}
+.popup_menu li > ul {
+    left: 100%; /*меню появляется справа от родителя*/
+    top: 0%; /*верх дочернего меню приравнивается к верху выбранного пункта*/
+}
+.popup_menu li div {
+    text-align: left; /*в выпадающем меню текст ориентирован слева*/
+}
+
+/*===============================================*/
+/* стили для пунктов меню в различных состояниях */
+/*===============================================*/
+.line_menu div,
+.popup_menu div {
+    font-family: Arial;
+    font-size: 10pt;
+    color: #000000;
+    padding: 2px 5px;
+
+    background-color: rgb(255, 255, 255); /*цвет фона в стандартном состоянии*/
+    user-select: none; /*убирает возможность выделить текст*/
+}
+.line_menu div:hover,
+.popup_menu div:hover {
+    background-color: rgb(230, 230, 230); /*цвет фона при наведении*/
+}
+.line_menu div:active,
+.popup_menu div:active {
+    background-color: rgb(200, 200, 200); /*цвет фона при нажатии*/
+}
+
+/*исли выпадающее меню содержит под пункты*/
+.popup_menu li > div::after {
+    content: " >";
+}
+.popup_menu li > div:only-child:after {
+    content: "";
+}

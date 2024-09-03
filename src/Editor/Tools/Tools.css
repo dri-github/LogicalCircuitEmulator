@@ -1,0 +1,14 @@
+.tools {
+    float: left;
+    padding: 5px;
+}
+
+.tools button {
+    width: 20px;
+    height: 20px;
+    margin-right: 2px;
+}
+
+.tools button:last-child {
+    margin-right: 0px;
+}

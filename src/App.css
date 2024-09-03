@@ -1,0 +1,36 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+/*главная область страницы*/
+.App {
+    height: 100vh; /*высота во весь экран*/
+}
+
+/*область для меню*/
+.menu {
+    width: 100%;
+    height: 20px; /*высота меню (при изменении необходимо изменить значение в editor.css)*/
+}
+
+/*========================*/
+/*          Меню          */
+/*========================*/
+.menu,
+.line_menu div,
+.popup_menu div {
+    background-color: rgb(255, 255, 255);
+}
+.line_menu div:hover,
+.popup_menu div:hover {
+    background-color: rgb(230, 230, 230);
+}
+.line_menu div:active,
+.popup_menu div:active {
+    background-color: rgb(200, 200, 200);
+}
+
+.popup_menu div {
+    min-width: 120px;
+}
